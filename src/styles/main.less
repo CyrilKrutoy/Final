@@ -1,0 +1,255 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+@font-family-Montserrat: 'Montserrat', sans-serif;
+@font-famili-Kaushan:'Kaushan Script';
+@t-d: none;
+@textcolor:#ffffff;
+
+.flex(@aling:center, @just:center) {
+  display: flex;
+  align-items: @aling;
+  justify-content: @just;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  height: 1001px;
+  width: 100vw;
+}
+.header_img_gradient{
+  height: 1001px;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.9;
+}
+.header_img_eagle{
+  height: 1001px;
+  width: 100vw;
+  position: absolute;
+  z-index: -2;
+}
+
+#head{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.logo{
+  color: @textcolor;
+  font-family: @font-family-Montserrat;
+  font-size: 30px;
+  margin-top: 28px;
+  font-weight: 600;
+  text-decoration: @t-d;
+}
+#menu{
+  display: flex;
+  flex-direction: row;
+}
+.menu_items{
+  list-style: none;
+  display: flex;
+  margin-top: 40px;
+}
+.menu_icons{
+  margin-top: 40px;
+}
+
+li{
+  padding-right: 29px;
+}
+
+#menu_link_item{
+  color: @textcolor;
+  font-family: @font-family-Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: @t-d;
+  text-transform: uppercase;
+  &:hover{
+    transition: ease-in 0.2s;
+    color: #FCE38A;
+    border-bottom:2px solid #FCE38A;
+    padding: 10px 0;
+  }
+}
+
+#header_icons{
+  height: 15px;
+  width: 18px;
+  margin: 2px 20px;
+  cursor: pointer;
+}
+
+#title{
+  .flex(center, center);
+  flex-direction: column;
+  margin-top: 115px;
+  text-align: center;
+  flex-wrap: wrap;
+
+.first_title_string{
+    color:@textcolor;
+    font-family: @font-famili-Kaushan;
+    font-size: 72px;
+  }
+.second_title_string{
+    color: @textcolor;
+    font-family: @font-family-Montserrat;
+    font-size: 9vw;
+    font-weight: bold;
+    width: 64vw;
+    height: fit-content;
+    margin-top: 42px;
+    line-height: 150px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+.border_header{
+    width: 61px;
+    height: 4px;
+    background-color: @textcolor;
+    margin-top: 45px;
+  }
+
+#button{
+  .flex(center, center);
+  margin-top: 50px;
+  width: 160px;
+  height: 40px;
+  border: 3px solid #ffffff;
+  color: @textcolor;
+  font-family: @font-family-Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: @t-d;
+  }
+  #button:hover{
+    background: #F38181;
+    transition: 0.4s;
+  }
+}
+
+@media (min-width: 468px) and (max-width: 768px) {
+
+#head{
+    .flex(center, center);
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+#title { 
+  margin-top: 80px;
+
+.first_title_string{
+    font-size: 60px;
+  }
+.second_title_string{
+  width: 93vw;
+  line-height: 110px;
+  font-size: 13vw;
+  }
+}
+}
+@media (max-width: 468px){
+
+#title { 
+    margin-top: 150px;
+  
+.first_title_string{
+      font-size: 40px;
+    }
+.second_title_string{
+    width: 99vw;
+    line-height: 65px;
+    font-size: 14vw;
+}
+  }
+}
+// #menu{
+//   .flex(center, center);
+//   flex-direction: column;
+// }
+
+#info_about_us{
+  height: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.style_infoText{
+margin-top: 68px;
+font-family: @font-famili-Kaushan;
+font-size: 24px;
+color:#333333;
+}
+
+.style_text{
+  margin-top: 17px;
+  font-family: @font-family-Montserrat;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  color:#333333;
+}
+.border{
+  width: 61px;
+  height: 4px;
+  background-color: #F38181;
+  margin-top: 30px;
+}
+.our_story{
+  margin-top: 35px;
+  font-family: 'Roboto', sans-serif;
+  height: fit-content;
+  width: 60vw;
+  font-size: 15px;
+  text-align: center;
+}
+.work{
+  .flex(center, center);
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 65px;
+  height: fit-content;
+  width: 100vw;
+}
+.work-image {
+  width: 381px;
+  height: 251px;
+  margin-left: 15px;
+  }
+  .work-image:first-child{
+    margin-left:0px;
+  }
+
+  #vector{
+    height: 271px;
+    background-color: #95E1D3;
+  }
+
+  #info_we_work{
+    height: 325px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
