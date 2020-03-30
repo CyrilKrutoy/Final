@@ -32,24 +32,25 @@ body {
 header {
   display: flex;
   flex-direction: column;
-  height: 1001px;
+  height: 900px;
   width: 100vw;
 }
-.header_img_gradient {
-  height: 1001px;
+.img_gradient_settings {
+  height: 900px;
   width: 100vw;
   position: absolute;
   z-index: -1;
   opacity: 0.9;
 }
-.header_img_eagle {
-  height: 1001px;
+.img_settings {
+  height: 900px;
   width: 100vw;
   position: absolute;
   z-index: -2;
 }
 #head {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -68,13 +69,13 @@ header {
 .menu_items {
   list-style: none;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 40px;
+  width: 365px;
 }
 .menu_icons {
   margin-top: 40px;
-}
-li {
-  padding-right: 29px;
 }
 #menu_link_item {
   color: #ffffff;
@@ -153,7 +154,9 @@ li {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
+  }
+  .menu_items {
+    width: 335px;
   }
   #title {
     margin-top: 80px;
@@ -168,6 +171,26 @@ li {
   }
 }
 @media (max-width: 468px) {
+  #head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #menu .menu_items {
+    width: 250px;
+    height: 80px;
+    justify-content: space-around;
+  }
+  #menu .menu_items #menu_link_item {
+    margin-left: 15px;
+  }
   #title {
     margin-top: 150px;
   }
@@ -181,7 +204,8 @@ li {
   }
 }
 #info_about_us {
-  height: 600px;
+  width: 100vw;
+  height: fit-content;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -201,6 +225,7 @@ li {
   color: #333333;
 }
 .border {
+  display: block;
   width: 61px;
   height: 4px;
   background-color: #F38181;
@@ -214,23 +239,19 @@ li {
   font-size: 15px;
   text-align: center;
 }
-.work {
+#work {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 65px;
-  height: fit-content;
-  width: 100vw;
 }
 .work-image {
   width: 381px;
   height: 251px;
-  margin-left: 15px;
-}
-.work-image:first-child {
-  margin-left: 0px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 #vector {
   height: 271px;
@@ -241,4 +262,26 @@ li {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+#For_all_devices {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.gradient {
+  height: 900px;
+}
+.wood {
+  height: 900px;
+}
+.ipad {
+  margin-top: 127px;
+}
+.iphone {
+  display: block;
+  position: relative;
+  left: 255px;
+  bottom: 385px;
 }
